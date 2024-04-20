@@ -30,6 +30,7 @@ if(listInputSearch){
         })
     }
 }
+
 function render(){
     if(listBoxSearching){
             let productSearchSm = document.createElement('div');
