@@ -235,7 +235,7 @@ function goToShowProduct(){
     let listPosts = document.querySelectorAll('.product_searching') 
         listPosts.forEach(listPost =>{
             listPost.onclick = () =>{
-            window.location.href = `gid/pages/showThatProduct/showproduct.html?productid=${listPost.id}`
+            window.location.href = `./floral_oasis/pages/showThatProduct/showproduct.html?productid=${listPost.id}`
         }
     })
 }
