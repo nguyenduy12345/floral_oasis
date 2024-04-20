@@ -72,6 +72,7 @@ function goToShowProduct(){
         window.location.href = `../../../pages/showThatProduct/showproduct.html?productid=${listPost.id}`
     }
 })
+}
 
 goToShowProduct()  
 
