@@ -230,3 +230,13 @@ products.push(accessory1, accessory2, accessory3, accessory4, accessory5, access
 // PUSH TO LOCALSTORAGE
 let setLocalProducts = products
     localStorage.setItem('PRODUCTS', JSON.stringify(setLocalProducts))
+
+function goToShowProduct(){
+    let listPosts = document.querySelectorAll('.product_searching') 
+        listPosts.forEach(listPost =>{
+            listPost.onclick = () =>{
+            window.location.href = `../../pages/showThatProduct/showproduct.html?productid=${listPost.id}`
+        }
+    })
+}
+goToShowProduct()  
