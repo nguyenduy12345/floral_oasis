@@ -16,7 +16,7 @@ let renderProduct = (list) =>{
     listPost.innerHTML += `
     <div id=${list[i].id} class="product_list_item col-sm-12 col-md-6 col-lg-4 pe-2">
     <div class="product_img">
-        <img src="${list[i].src}">
+        <img src="" lazy-src="${list[i].src}">
         <div class="product_cart text-uppercase"><i class="fa-solid fa-eye me-2"></i>View product</div>   
     </div>
     <div class="product-description">
@@ -384,7 +384,7 @@ function renderOtherProduct(){
     let listPosts = document.querySelectorAll('.product_list_item') 
         listPosts.forEach(listPost =>{
         listPost.onclick = () =>{
-        window.location.href = `/pages/showThatProduct/showproduct.html?productid=${listPost.id}`
+        window.location.href = `../../pages/showThatProduct/showproduct.html?productid=${listPost.id}`
     }
 })
 }

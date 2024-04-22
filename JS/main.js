@@ -126,3 +126,29 @@ if(loading){
         loading.style.display = "none"
     }
 }
+
+
+//LAZY LOADING
+let listImg = document.querySelectorAll('[lazy-src]')
+function lazyLoading(img){
+    listImg.forEach(img =>{
+        let getSrc = img.getAttribute('lazy-src')
+        img.setAttribute('src', getSrc )
+    })
+}
+function ready(){
+    if('IntersectionObserver' in window){
+        let observer = new IntersectionObserver((entries)=>{
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    console.log(entry.isIntersecting)
+                    lazyLoading(entry.target)
+                }
+            })
+        });
+        listImg.forEach(img =>{
+            observer.observe(img)
+        })
+    }
+}
+document.addEventListener('DOMContentLoaded', ready)
